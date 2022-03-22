@@ -163,7 +163,7 @@ def main():
     st.title("Webcam Live Detection")
     run = st.checkbox('Run')
     FRAME_WINDOW = st.image([])
-    camera = cv2.VideoCapture(0)
+    camera = cv2.VideoCapture(-1)
 
     while run:
         _, frame = camera.read()
