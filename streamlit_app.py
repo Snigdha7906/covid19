@@ -167,9 +167,11 @@ def main():
 
     while run:
         _, frame = camera.read()
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        img=obj_detection(frame,1, MIN_DIST)
-        FRAME_WINDOW.image(img)
+        if frame:
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            img=obj_detection(frame,1, MIN_DIST)
+            FRAME_WINDOW.image(img)
+
     else:
         st.write('Stopped')
         
