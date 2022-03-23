@@ -167,7 +167,7 @@ def main():
 
     while run:
         _, frame = camera.read()
-        if frame:
+        if len(frame)>0:
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             img=obj_detection(frame,1, MIN_DIST)
             FRAME_WINDOW.image(img)
