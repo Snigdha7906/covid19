@@ -167,7 +167,7 @@ def main():
 
     while run:
         ret, frame = camera.read()
-        if (frame is not None) or (len(frame)>0):
+        if type(frame) != type(None):
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             img=obj_detection(frame,1, MIN_DIST)
             FRAME_WINDOW.image(img)
