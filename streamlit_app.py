@@ -160,18 +160,18 @@ def main():
     
 
 
-    # st.title("Webcam Live Detection")
-    # run = st.checkbox('Run')
-    # FRAME_WINDOW = st.image([])
-    # camera = cv2.VideoCapture(-1)
+    st.title("Webcam Live Detection")
+    run = st.checkbox('Run')
+    FRAME_WINDOW = st.image([])
+    camera = cv2.VideoCapture(-1)
 
-    # while run:
-    #     _, frame = camera.read()
-    #     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    #     img=obj_detection(frame,1, MIN_DIST)
-    #     FRAME_WINDOW.image(img)
-    # else:
-    #     st.write('Stopped')
+    while run:
+        _, frame = camera.read()
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        img=obj_detection(frame,1, MIN_DIST)
+        FRAME_WINDOW.image(img)
+    else:
+        st.write('Stopped')
         
 
 if __name__ == '__main__':
